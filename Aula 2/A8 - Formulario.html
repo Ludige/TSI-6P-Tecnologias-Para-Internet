@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A8</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="app">
+
+    <p>Nome:</p>
+    <input v-model="nome" type="text" placeholder="Digite seu nome"/>
+
+
+    <p>Gênero:</p>
+    <input v-model="genero" type="radio" id="masc" value="Masculino"/>
+    <label for="masc">Masculino</label>
+    <input v-model="genero" type="radio" id="fem" value="Feminino"/>
+    <label for="fem">Feminino</label>
+    <input v-model="genero" type="radio" id="neutro" value="Neutro"/>
+    <label for="neutro">Neutro</label>
+
+    
+    <p>Lingua:</p>
+    <input v-model="ptbr" type="checkbox">
+    <label for="ptbr">Português</label><p></p>
+    <input v-model="eng" type="checkbox">
+    <label for="eng">Ingles</label><p></p>
+    <input v-model="esp" type="checkbox">
+    <label for="esp">Espanhol</label><p></p>
+
+
+    <p>Pais:</p>
+    <select v-model="pais">
+            <option disabled value="" id="disabled">Escolha um</option>
+            <option value="BR">Brasil</option>
+            <option value="USA">Estados Unidos</option>
+            <option value="ESP">Espanha</option>
+    </select>
+
+    <p></p>
+    <button @click="enviar">Enviar</button>
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                nome: "",
+                genero: "",
+                ptbr: false,
+                eng: false,
+                esp: false,
+                pais: "",
+            },
+
+            methods:{
+                enviar(){
+                    this.nome = "";
+                    this.genero = null;
+                    this.ptbr = null;
+                    this.eng = null;
+                    this.esp = null;
+                }
+            },
+        })
+    </script>
+</body>
+
+<style type="text/css">
+    p{
+        font-size: 20px;
+        color: #2287da;
+    }
+    button{
+        background-color: #99c5e9;
+        border-width: 0.01cm;
+        margin-left: 5vh;
+        margin-top: 2vh;
+    }
+</style>
+</html>

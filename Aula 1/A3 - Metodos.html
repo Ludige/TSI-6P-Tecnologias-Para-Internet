@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>+ na Lista</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="tela">
+        <input v-model="input" placeholder="Digite um item">
+        <button v-on:click="add">+</button>
+
+        <ol>
+            <li v-for="item in lista">
+                {{item.texto}}
+            </li>
+        </ol>
+
+    </div>
+
+    <script>
+        var tela = new Vue({
+            el: '#tela',
+            data:{
+                input: '',
+                lista:[
+                    {texto: 'Controle'},
+                    {texto: 'Mouse'},
+                    {texto: 'Teclado'}
+                ]
+            },
+            methods: {
+                add:function(){
+                    if(tela.input){
+                        tela.lista.push({ texto: tela.input})
+                        tela.input = "";
+                    }
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>

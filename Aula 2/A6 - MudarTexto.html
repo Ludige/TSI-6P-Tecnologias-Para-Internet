@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titulo e Paragrafo</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="tela">
+        <h1>{{titulo}}</h1>
+        <p>{{paragrafo}}</p>
+
+        <input v-model="titulo" placeholder="Mudar Paragrafo">
+        <input v-model="paragrafo" placeholder="Mudar Paragrafo">
+    </div>
+
+    <script>
+        var tela = new Vue({
+            el: '#tela',
+            data: {
+                titulo: "Titulo",
+                paragrafo: "Texto"
+            },
+        })
+    </script>
+</body>
+</html>

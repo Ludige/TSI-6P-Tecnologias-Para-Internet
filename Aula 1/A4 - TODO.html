@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duas Listas</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="app">
+        <ol>
+            Lista 1:
+          <li v-for="item in lista">
+            {{ item.texto }}
+          </li>
+        </ol>
+
+        <ol>
+          Lista 2:
+          <todo-item 
+            v-for="item in lista2"
+            v-bind:item = "item"
+          >
+        </todo-item>
+        </ol>
+    </div>
+
+      <script>
+         Vue.component('todo-item',{
+          props:['item'],
+          template:'<li>{{item.texto}}</li>'
+         })
+
+        var app = new Vue({
+        el: '#app',
+        data: {
+            lista: [
+            { texto: 'Controle' },
+            { texto: 'Mouse' },
+            { texto: 'Teclado' }
+            ],
+            lista2:[
+              {texto:'Mesa'},
+              {texto:'Cadeira'},
+              {texto:'Luminaria'}
+            ]
+        }
+        })
+      </script>
+    
+</body>
+</html>

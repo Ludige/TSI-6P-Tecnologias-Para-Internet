@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atv 1</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="tela">
+        <span v-if="status == true" v-bind:title="message">
+            Não passa o mouse em mim 😏
+        </span>
+    </div>
+
+	<script>
+        var app = new Vue({
+        el: '#tela',
+        data: {
+            status: true,
+            message: 'Para de me passar o mouse😳'
+        }
+        })
+    </script> 
+</body>
+</html>

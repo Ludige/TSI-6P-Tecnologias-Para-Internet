@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eu Hablo Mesmo 💅</title>
+
+    <style>
+    #app {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 { /* Pra não selecionar quando clicar no botão*/
+        cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+    }
+
+    </style>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="app">
+        <p>Clica no Cookie</p>
+        <h1 v-on:click="add()">🍪</h1>
+        <p style="font-weight: bold;">{{numero}} Cookies assados</p>
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                numero: 0,
+                aviso: "",
+            },
+
+            methods:{
+                add(){
+                    this.numero++;
+                }
+            },
+        })
+    </script>
+</body>
+
+<style type="text/css">
+    p{
+        font-size: 25px;
+    }
+</style>
+</html>

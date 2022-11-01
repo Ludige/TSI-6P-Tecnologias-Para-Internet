@@ -1,0 +1,3 @@
+O Vue Component é uma das funções de Vue Js que permite definir as partes de um component dentro do proprio Vue Component, 
+Assim, na criação de uma lista poderiamos colocar as diferentes partes da lista no Vue Component e no chamada dessa lista
+usariamos apenas os parametros da propria lista em vez usar as listas e os componentes

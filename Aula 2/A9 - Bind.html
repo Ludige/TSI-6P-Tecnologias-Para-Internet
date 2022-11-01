@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A9</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="app">
+        <h1>Animais</h1>
+        <img v-if="pick == true" v-bind:src="imagemUm" v-bind:alt="alt1">
+        <img v-else :src="imagemDois" v-bind:alt="alt2">
+
+        <p v-if="pick == true" v-bind:class="textoUm">Bisteca</p>
+        <p v-else :class="textoDois">Jeniffer</p>
+
+        <button @click="mudar">Mudar</button>
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                pick: true,
+                imagemUm: "https://d3ugyf2ht6aenh.cloudfront.net/stores/974/635/products/capa11-8e476af501494c475916579838012019-240-0.png",
+                imagemDois: "https://pbs.twimg.com/profile_images/1322683103672999937/roddaWWi_400x400.jpg",
+                textoUm: "",
+                textoDois: "",
+                alt1:"Gato Bisteca",
+                alt2: "Gata Jeniffer",
+            },
+            methods:{
+                mudar(){
+                    this.pick = !this.pick;
+                }
+            },
+        })
+    </script>
+</body>
+
+<style type="text/css">
+    img{
+        width: 250px;
+        height: 250px;
+    }
+</style>
+</html>

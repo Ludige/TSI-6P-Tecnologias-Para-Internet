@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atv 2</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <div id="books">
+        
+        <ol>
+            Livros:
+          <li v-for="livro in livros">
+            {{ livro.text }}
+          </li>
+        </ol>
+      </div>
+
+      <div id="school">
+        <ol>
+            Material Escolar:
+          <li v-for="material in school">
+            {{ material.text }}
+          </li>
+        </ol>
+      </div>
+
+      <div id="names">
+        <ol>
+            Nomes:
+          <li v-for="name in names">
+            {{ name.text }}
+          </li>
+        </ol>
+      </div>
+
+
+    <script>
+        var app = new Vue({
+        el: '#books',
+        data: {
+            livros: [
+            { text: 'Livro de Programação' },
+            { text: 'Livro de ficção cientifica' },
+            { text: 'Livro de Aventura' }
+            ]
+        }
+        })
+
+        var app = new Vue({
+        el: '#school',
+        data: {
+            school: [
+            { text: 'Livro' },
+            { text: 'Caderno' },
+            { text: 'Borracha' },
+            { text: 'Mochila'},
+            { text:'Lapis'}
+            ]
+        }
+        })
+
+        var app = new Vue({
+        el: '#names',
+        data: {
+            names: [
+            { text: 'Renner' },
+            { text: 'Rafael' },
+            { text: 'Lucas' }
+            ]
+        }
+        })
+    </script>
+</body>
+</html>
