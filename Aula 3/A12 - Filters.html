@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+    <div id="list">
+        <ol>
+            Nomes:
+          <li v-for="item in lista">
+            {{ item.nome | minusculo | truncate}}
+          </li>
+        </ol>
+    </div>
+
+    <script>
+        var app = new Vue({
+        el: '#list',
+        data:{
+            lista:[
+            { nome: 'LivRo' },
+            { nome: 'CadeRno' },
+            { nome: 'BoRracha' },
+            { nome: 'MocHila'},
+            { nome:'LapIs'}]
+        },
+
+        filters:{
+            minusculo(str){
+                string = str.toString();
+                return string.toLowerCase();
+            },
+            truncate(str){
+                string = str,toString();
+                if (string.length > 6){
+                    string = str.substring(0, 6) + '...';
+                }
+                return string;
+            }
+        },
+    })        
+    </script>
+</body>
+</html>
