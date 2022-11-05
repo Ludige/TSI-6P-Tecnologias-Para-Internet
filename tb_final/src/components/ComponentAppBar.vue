@@ -1,6 +1,6 @@
 <template>
     <div id="AppBarBackground">
-        <div id="logo">
+        <div id="logo" @click="toHome">
             <p>🐾</p>
         </div>
         
@@ -18,7 +18,8 @@
 
 <script>
 import ComponentSearchBar from './ComponentSearchBar.vue'
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
     components: { ComponentSearchBar },
     data() {
         return{
@@ -30,11 +31,14 @@ export default {
         toCart(){
             //TODO Redirecionar para outra tela
         },
+        toHome(){
+            
+        },
         search(){
             //TODO implementar a busca de produtos
         }
     }
-}
+})
 </script>
 
 <style>

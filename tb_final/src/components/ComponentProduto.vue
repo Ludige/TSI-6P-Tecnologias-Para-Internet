@@ -10,7 +10,7 @@
   </div>
 
   <div id="descLabel">
-    <span  id="desc">{{desc}}</span>
+    <span  id="desc">{{recortar}}</span>
   </div>
 
   <div id="priceLabel">
@@ -20,21 +20,38 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return{
-          nome:"Product Name",
-          desc:"Base Description",
-          price: 0.0,
-          imagem: "https://pbs.twimg.com/profile_images/1322683103672999937/roddaWWi_400x400.jpg",
+import { defineComponent } from 'vue';
+export default defineComponent({
+    props:{
+      nome: {
+        type: String,
+      },
+      desc: {
+        type: String,
+      },
+      price: {
+        type: Number,
+      },
+      imagem: {
+        type: Image,
+      }
+    },
+
+    computed: {
+      recortar(){
+          var output = this.desc;
+          if (output.length > 60){
+              output = this.desc.substring(0, 60) + '...';
           }
+          return output;
+      }
     },
     methods:{
       toProduct(){
           //TODO Redirecionar para outra tela
       },
     }
-}
+})
 </script>
 
 <style>
@@ -59,6 +76,7 @@ export default {
 }
 #desc{
   font-size: 17px;
+  color: rgb(66, 65, 65);
   margin: 5%;
 }
 #priceLabel{

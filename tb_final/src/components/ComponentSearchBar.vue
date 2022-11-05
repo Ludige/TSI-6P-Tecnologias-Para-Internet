@@ -9,7 +9,8 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
     data() {
         return{
             pesquisar:"",
@@ -20,7 +21,7 @@ export default {
             //TODO implementar a busca de produtos
         }
     }
-}
+})
 </script>
 
 <style>
