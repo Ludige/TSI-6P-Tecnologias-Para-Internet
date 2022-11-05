@@ -90,5 +90,4 @@ export default defineComponent({
     #profilePicture:hover{
         cursor: pointer;
     }
-
 </style>
