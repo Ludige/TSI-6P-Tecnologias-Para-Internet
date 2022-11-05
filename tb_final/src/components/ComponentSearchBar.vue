@@ -43,5 +43,8 @@ export default defineComponent({
         border-bottom-right-radius: 10px;
         border-color: black;
     }
+    #searchButton:hover{
+        cursor: pointer;
+    }
 
 </style>

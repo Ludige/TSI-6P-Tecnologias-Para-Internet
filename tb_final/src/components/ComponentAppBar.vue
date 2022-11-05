@@ -1,7 +1,7 @@
 <template>
     <div id="AppBarBackground">
-        <div id="logo" @click="toHome">
-            <p>🐾</p>
+        <div id="logo">
+            <button id="logoText" @click="toHome">🐾</button>
         </div>
         
         <div id="sizedBox"></div>
@@ -18,6 +18,8 @@
 
 <script>
 import ComponentSearchBar from './ComponentSearchBar.vue'
+import router from "../routes/router";
+
 import { defineComponent } from 'vue';
 export default defineComponent({
     components: { ComponentSearchBar },
@@ -28,11 +30,11 @@ export default defineComponent({
         }
     },
     methods:{
-        toCart(){
-            //TODO Redirecionar para outra tela
+        toPerfil(){
+            router.push({ name: "login"});
         },
         toHome(){
-            
+            router.push({ name: "home"});
         },
         search(){
             //TODO implementar a busca de produtos
@@ -72,13 +74,21 @@ export default defineComponent({
         border-radius: 20px;
         background-color: transparent;
     }
-    p{
+    #logoText{
         font-size: 40px;
         font-weight: bold;
         font-family: 'Courier New', Courier, monospace;
         margin-left: 20px;
         margin-top: 0px;
         height: auto;
+        background-color: transparent;
+    }
+    #logoText:hover{
+        cursor: pointer;
+    }
+
+    #profilePicture:hover{
+        cursor: pointer;
     }
 
 </style>

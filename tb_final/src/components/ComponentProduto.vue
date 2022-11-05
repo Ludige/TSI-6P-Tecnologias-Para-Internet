@@ -1,5 +1,5 @@
 <template>
-<div id=produto @click="toProduct">
+<div id=produto>
   <div class="image">
     <img v-bind:src="imagem" class="image">
   </div>
@@ -46,11 +46,6 @@ export default defineComponent({
           return output;
       }
     },
-    methods:{
-      toProduct(){
-          //TODO Redirecionar para outra tela
-      },
-    }
 })
 </script>
 

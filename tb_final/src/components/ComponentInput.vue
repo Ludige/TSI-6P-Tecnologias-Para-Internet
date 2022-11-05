@@ -6,7 +6,6 @@
       v-model="campo"
       @change="search"
       >
-        
     </div>
 </template>
 
@@ -23,16 +22,13 @@ export default defineComponent({
           campo:"",
         }
     },
-    methods:{
-
-    }
 })
 </script>
 
 <style scoped>
   input{
-    background-color: rgb(242, 243, 242);
-    border: 1.5px solid #747474;
+    background-color: white;
+    border: 1.5px solid;
     height: 35px;
     width: 60vh;
     padding-left: 10px;
