@@ -33,7 +33,7 @@ export default defineComponent({
         type: Number,
       },
       imagem: {
-        type: Image,
+        type: String,
       }
     },
 

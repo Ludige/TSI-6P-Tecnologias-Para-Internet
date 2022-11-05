@@ -1,6 +1,7 @@
 <template>
   <div>
     <component-app-bar/>
+    <router-view></router-view>
 
     <div id="produtos">
       <div>
@@ -51,10 +52,11 @@
 <script>
 import ComponentAppBar from '../components/ComponentAppBar.vue'
 import ComponentProduto from '../components/ComponentProduto.vue'
-import { defineComponent } from 'vue';
-export default defineComponent({
+
+export default {
+  name: 'PetShop',
   components: { ComponentAppBar, ComponentProduto},
-})
+}
 </script>
 
 <style>
