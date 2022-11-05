@@ -41,7 +41,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
     #AppBarBackground{
         background-color: black;
         height: 10vh;

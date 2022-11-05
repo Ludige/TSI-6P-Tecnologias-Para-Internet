@@ -54,7 +54,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style  scoped>
 .image{
   background-color: grey;
   width: 20vw;

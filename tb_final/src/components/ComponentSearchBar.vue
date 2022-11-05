@@ -24,7 +24,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style  scoped>
     input{
         height: 35px;
         width: 60vh;

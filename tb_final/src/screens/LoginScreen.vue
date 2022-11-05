@@ -1,7 +1,7 @@
 <template>
     <div>
         <component-app-bar></component-app-bar>
-        <component-input placeholder="asas"></component-input>
+        <component-input :nome="'User'"></component-input>
     </div>
 </template>
 
@@ -14,6 +14,6 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

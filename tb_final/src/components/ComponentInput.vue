@@ -1,6 +1,8 @@
 <template>
-    <div>aa
+    <div>
+      <p>{{nome}}:</p>
       <input
+      
       v-model="campo"
       @change="search"
       >
@@ -12,6 +14,9 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
     props:{
+      nome:{
+        type: String,
+      }
     },
     data() {
         return{
@@ -19,10 +24,18 @@ export default defineComponent({
         }
     },
     methods:{
+
     }
 })
 </script>
 
-<style>
-
+<style scoped>
+  input{
+    background-color: rgb(242, 243, 242);
+    border: 1.5px solid #747474;
+    height: 35px;
+    width: 60vh;
+    padding-left: 10px;
+    border-radius: 10px;
+  }
 </style>
