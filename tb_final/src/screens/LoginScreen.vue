@@ -1,12 +1,16 @@
 <template>
     <div>
-        teste teste aaaa
+        <component-app-bar></component-app-bar>
+        <component-input placeholder="asas"></component-input>
     </div>
 </template>
 
 <script>
+import ComponentAppBar from '../components/ComponentAppBar.vue'
+import ComponentInput from '../components/ComponentInput.vue'
 export default{
     name: 'LoginScreen',
+    components: { ComponentInput, ComponentAppBar},
 }
 </script>
 
