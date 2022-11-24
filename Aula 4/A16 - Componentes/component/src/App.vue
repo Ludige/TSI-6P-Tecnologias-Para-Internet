@@ -1,5 +1,5 @@
 <template>
-  <component-input :nome="Nome"></component-input>
+  <component-input/>
 </template>
 
 <script>

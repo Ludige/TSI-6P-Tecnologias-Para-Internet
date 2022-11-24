@@ -1,25 +1,13 @@
 <template>
     <div>
-      <p>{{nome}}:</p>
-      <input
-      
-      v-model="campo"
-      >
+      <h1>Exilio</h1>
     </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
 export default defineComponent({
-    props:{
-      nome:{
-        type: String,
-      }
-    },
     data() {
-        return{
-          campo:"",
-        }
     },
 })
 </script>
