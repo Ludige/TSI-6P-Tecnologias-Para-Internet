@@ -5,7 +5,7 @@
         v-model="pesquisar"
         @change="search"
         >
-        <button id="searchButton" @click="search"><font-awesome-icon icon="phone" id="lupa"/></button>
+        <button id="searchButton" @click="search"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
     </div>
 
 </template>
@@ -37,15 +37,13 @@ export default defineComponent({
 
     #searchButton{
         background-color: white;
-        margin-right: 20px
+        margin-right: 20px;
         width: 5vh;
+        height: 5vh;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-color: black;
         cursor: pointer;
-    }
-    lupa{
-        color: aqua,
     }
 
 </style>
