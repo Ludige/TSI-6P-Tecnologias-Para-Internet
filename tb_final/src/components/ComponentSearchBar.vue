@@ -1,10 +1,12 @@
 <template>
-                <input
-                placeholder=" Pesquisar..."
-                v-model="pesquisar"
-                @change="search"
-                >
-                <button id="searchButton" @click="search">🔎</button>
+    <div>
+            <input
+        placeholder=" Pesquisar..."
+        v-model="pesquisar"
+        @change="search"
+        >
+        <button id="searchButton" @click="search"><font-awesome-icon icon="phone" id="lupa"/></button>
+    </div>
 
 </template>
 
@@ -34,17 +36,16 @@ export default defineComponent({
     }
 
     #searchButton{
-        font-size: 10px;
         background-color: white;
-        margin-right: 20px;
-        height: 35px;
+        margin-right: 20px
         width: 5vh;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-color: black;
-    }
-    #searchButton:hover{
         cursor: pointer;
+    }
+    lupa{
+        color: aqua,
     }
 
 </style>
