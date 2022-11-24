@@ -2,15 +2,24 @@
     <div>
       <input v-model="campo">
       <button @click="add" id="btn">+</button>
-      <button @click="remove" id="btn">Clear</button>
 
       <ol>
-        Livros:
+        Estante 1:
         <li v-for="item in lista" :key="item">
           {{ item }}
         </li>
       </ol>
+
+      <button @click="copy" id="btn">+</button>
+
+      <ol>
+        Estante 2:
+        <li v-for="item in lista2" :key="item">
+          {{ item }}
+        </li>
+      </ol>
     </div>
+    
 </template>
 
 <script>
@@ -19,6 +28,7 @@ export default defineComponent({
     data() {
         return{
           lista:[],
+          lista2:[],
           campo: "",
         }
     },

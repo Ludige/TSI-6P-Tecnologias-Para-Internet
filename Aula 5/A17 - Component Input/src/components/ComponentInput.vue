@@ -2,7 +2,6 @@
     <div>
       <input v-model="campo">
       <button @click="add" id="btn">+</button>
-      <button @click="remove" id="btn">Clear</button>
 
       <ol>
         Livros:
@@ -27,11 +26,6 @@ export default defineComponent({
         if(this.campo != ""){
           this.lista.push(this.campo);
           this.campo = "";
-        }
-      },
-      remove(){
-        if(this.lista.length > 0){
-          this.lista.splice(0);
         }
       }
     }
