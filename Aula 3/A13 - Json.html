@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json</title>
+    <script src=""/>
+</head>
+<body>
+    <script src = "https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <div id="app">
+        {{info.rate}}
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                info: null
+            },
+            mounted(){
+                axios
+                .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                .then(response => (this.info = response))
+            }
+        })
+    </script>
+</body>
+</html>
