@@ -32,11 +32,9 @@
 
 
     <p>Pais:</p>
-    <select v-model="pais">
+    <select v-model="country">
             <option disabled value="" id="disabled">Escolha um</option>
-            <option value="BR">Brasil</option>
-            <option value="USA">Estados Unidos</option>
-            <option value="ESP">Espanha</option>
+            <option value="" v-for="pais in paises">{{pais}}</option>
     </select>
 
     <p></p>
@@ -52,7 +50,12 @@
                 ptbr: false,
                 eng: false,
                 esp: false,
-                pais: "",
+                country: "",
+                paises: {
+                    select1: "Brasil",
+                    select2: "Estados Unidos",
+                    select3: "Espanha",
+                }
             },
 
             methods:{
