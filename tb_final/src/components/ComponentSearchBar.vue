@@ -5,7 +5,7 @@
         v-model="pesquisar"
         @change="search"
         >
-        <button id="searchButton" @click="search"><font-awesome-icon icon="fa-solid fa-magnifying-glass" /></button>
+        <button id="searchButton" @click="search"></button>
     </div>
 
 </template>

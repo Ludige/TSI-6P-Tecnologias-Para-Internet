@@ -2,10 +2,12 @@
     <component-app-bar></component-app-bar>
     <div id="body">
         <form>
-            <component-input :nome="'Usuario'"/>
+            <component-input :nome="'Usuario'" v-model="user"/>
             <div id="sbSenha"></div>
-            <component-input :nome="'Senha'"/>
+            <component-input :nome="'Senha'"  v-model="password"/>
         </form>
+        {{user}}
+        {{password}}
         
         <div id="sbLogin"></div>
         <button @click="toHome">Login</button>
@@ -22,9 +24,16 @@ export default{
     components: { ComponentInput, ComponentAppBar},
     methods:{
         toHome(){
-            //TODO Verificar se usuario e senha existem 
-            router.push({ name: "home"});
+            if(this.user.match("admin") && this.password.match("admin")){
+                router.push({ name: "home"});
+            }
         },
+    },
+    data(){
+        return{
+            user:"admin",
+            password:"admin",
+        }
     }
 }
 </script>
