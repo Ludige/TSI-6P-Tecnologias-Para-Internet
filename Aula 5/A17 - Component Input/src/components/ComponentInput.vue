@@ -42,7 +42,7 @@ export default defineComponent({
     border-radius: 10px;
   }
   #btn{
-    width: 3vw;
+    width: 5vw;
     height: 5vh;
     background-color: greenyellow;
     margin-left: 10px;

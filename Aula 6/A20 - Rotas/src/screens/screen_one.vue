@@ -1,8 +1,8 @@
 <template>    
     <div id="body">
         <button @click="toHome">Voltar</button>
-        <button @click="toOne">Tela 1</button>
         <button @click="toTwo">Tela 2</button>
+        <button @click="toThree">Tela 3</button>
     </div>
 </template>
 
@@ -10,16 +10,16 @@
 import router from "../routes/router";
 
 export default{
-    name: 'Tela1',
+    name: 'ScreenOne',
     methods:{
         toHome(){
-            router.push({ name: "home"});
-        },
-        toOne(){
-            router.push({ name: "tela3"});
+            router.push({ name: "ScreenHome"});
         },
         toTwo(){
-            router.push({ name: "tela2"});
+            router.push({ name: "ScreenTwo"});
+        },
+        toThree(){
+            router.push({ name: "ScreenThree"});
         },
     }
 }
@@ -37,5 +37,8 @@ export default{
     }
     button:hover{
         cursor: pointer;
+    }
+    div{
+        background-color: aquamarine;
     }
 </style>

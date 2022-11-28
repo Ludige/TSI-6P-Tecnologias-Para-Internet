@@ -10,16 +10,16 @@
 import router from "../routes/router";
 
 export default{
-    name: 'Tela1',
+    name: 'ScreenThree',
     methods:{
         toHome(){
-            router.push({ name: "home"});
+            router.push({ name: "ScreenHome"});
         },
         toOne(){
-            router.push({ name: "tela2"});
+            router.push({ name: "ScreenOne"});
         },
         toThree(){
-            router.push({ name: "tela3"});
+            router.push({ name: "ScreenThree"});
         },
     }
 }
@@ -39,6 +39,6 @@ export default{
         cursor: pointer;
     }
     div{
-        background-color: burlywood;
+        background-color: gold;
     }
 </style>
