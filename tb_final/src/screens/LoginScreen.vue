@@ -1,27 +1,25 @@
 <template>
-    <component-app-bar></component-app-bar>
-    <div id="body">
-        <form>
-            <component-input :nome="'Usuario'" v-model="user"/>
-            <div id="sbSenha"></div>
-            <component-input :nome="'Senha'"  v-model="password"/>
-        </form>
-        {{user}}
-        {{password}}
-        
-        <div id="sbLogin"></div>
-        <button @click="toHome">Login</button>
-    </div>
+    <body>
+        <component-app-bar></component-app-bar>
+        <div id="body">
+            <form>
+                <input type="text" v-model="user" placeholder="User">
+                <input type="password" v-model="password" placeholder="Password" id="senha">
+            </form>
+            
+            <div id="sbLogin"></div>
+            <button @click="toHome">Login</button>
+        </div>
+    </body>
 </template>
 
 <script>
 import ComponentAppBar from '../components/ComponentAppBar.vue'
-import ComponentInput from '../components/ComponentInput.vue'
 import router from "../routes/router";
 
 export default{
     name: 'LoginScreen',
-    components: { ComponentInput, ComponentAppBar},
+    components: { ComponentAppBar},
     methods:{
         toHome(){
             if(this.user.match("admin") && this.password.match("admin")){
@@ -31,22 +29,27 @@ export default{
     },
     data(){
         return{
-            user:"admin",
-            password:"admin",
+            user:"",
+            password:"",
         }
     }
 }
 </script>
 
 <style scoped>
+    body{
+        background-image: url("../assets/logo.jpeg");
+        height: 100%;
+    }
     button{
-        border: 1.5px solid #747474;
+        border: 1.5px solid black;
         width: 100px;
         height: 30px;
         border-radius: 7px;
-        background-color: rgb(17, 158, 201);
-        color: white;
+        background-color: rgb(206, 228, 7);
+        color: black;
         margin-left: 23vw;
+        cursor: pointer;
     }
     #body{
         width: 32vw;
@@ -59,10 +62,13 @@ export default{
         color: pink;
         height: 4vh;
     }
-    #sbSenha{
-        height: 2vw;
-    }
-    button:hover{
-        cursor: pointer;
-    }
+    input{
+        background-color: white;
+        border: 1.5px solid;
+        height: 35px;
+        width: 60vh;
+        padding-left: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
 </style>

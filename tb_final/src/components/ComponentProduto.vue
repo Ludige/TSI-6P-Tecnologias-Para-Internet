@@ -1,22 +1,23 @@
 <template>
-<div id=produto>
-  <div class="image">
-    <img v-bind:src="imagem" class="image">
-  </div>
-  <div id="info"></div>
-
-  <div id="nomeLabel">
-    <span id="nome">{{nome}}</span>
-  </div>
-
-  <div id="descLabel">
-    <span  id="desc">{{recortar}}</span>
-  </div>
-
-  <div id="priceLabel">
-    <span id="price">R$ {{price}}</span>
-  </div>
-</div>
+  <body>
+    <div class="image">
+      <img v-bind:src="imagem" class="image">
+    </div>
+  
+    <div id="info">
+      <div id="nomeLabel">
+        <span id="nome">{{nome}}</span>
+      </div>
+    
+      <div id="descLabel">
+        <span  id="desc">{{recortar}}</span>
+      </div>
+    
+      <div id="priceLabel">
+        <span id="price">R$ {{price}}</span>
+      </div>
+    </div>
+  </body>
 </template>
 
 <script>
@@ -49,44 +50,50 @@ export default defineComponent({
 })
 </script>
 
-<style  scoped>
+<style scoped>
 .image{
   background-color: grey;
   width: 20vw;
   height: 35vh;
+  border-start-end-radius: 20px;
+  border-start-start-radius: 20px;
+  border: solid yellow 1px;
+}
+#info{
+  background-color: rgb(0, 0, 0);
+  border: solid yellow 1px;
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
 }
 #nomeLabel{
-  background-color: rgb(201, 201, 201);
   width: 20vw;
   height: 4vh;
 }
-#nome{
-  font-size: 20px;
-  margin: 2%;
-}
 #descLabel{
-  background-color: rgb(201, 201, 201);
   width: 20vw;
   height: 7vh;
 }
-#desc{
-  font-size: 17px;
-  color: rgb(66, 65, 65);
-  margin: 5%;
-}
 #priceLabel{
-  background-color: rgb(201, 201, 201);
   width: 20vw;
   height: 4vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+}
+#nome{
+  font-size: 20px;
+  color: rgb(241, 253, 129);
+  margin: 4%;
+}
+#desc{
+  font-size: 17px;
+  color: rgb(137, 143, 88);
+  margin: 5%;
 }
 #price{
   margin: 10%;
   font-size: 18px;
-  color: rgb(0, 87, 4);
+  color: rgb(255, 251, 4);
 }
 
 </style>

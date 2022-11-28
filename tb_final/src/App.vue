@@ -1,5 +1,7 @@
 <template>
-    <router-view></router-view>
+    <body>
+      <router-view></router-view>
+    </body>
 </template>
 
 <script>
@@ -13,5 +15,8 @@ export default {
     margin:0;
     padding: 0;
     border: 0;
+  }
+  body{
+    background-color: black;
   }
 </style>
