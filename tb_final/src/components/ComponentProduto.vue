@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <div>
     <div class="image">
       <img v-bind:src="imagem" class="image">
     </div>
@@ -17,7 +17,7 @@
         <span id="price">R$ {{price}}</span>
       </div>
     </div>
-  </body>
+  </div>
 </template>
 
 <script>

@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <body>
             <input
         placeholder=" Pesquisar..."
         v-model="pesquisar"
         @change="search"
         >
-        <button id="searchButton" @click="search"></button>
-    </div>
+        <button id="searchButton" @click="search"><img v-bind:src="logo" id="logo"></button>
+    </body>
 
 </template>
 
@@ -16,6 +16,7 @@ export default defineComponent({
     data() {
         return{
             pesquisar:"",
+            logo: "https://icones.pro/wp-content/uploads/2021/06/icone-loupe-noir.png",
         }
     },
     methods:{
@@ -34,7 +35,6 @@ export default defineComponent({
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
-
     #searchButton{
         background-color: white;
         margin-right: 20px;
@@ -45,5 +45,8 @@ export default defineComponent({
         border-color: black;
         cursor: pointer;
     }
-
+    #logo{
+        width: 3vh;
+        height: 3vh;
+    }
 </style>

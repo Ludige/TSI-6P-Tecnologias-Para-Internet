@@ -10,7 +10,7 @@
         </div>
         <div id="pfp">
             <button @click="toPerfil" id="pfpButton">
-                <img v-bind:src="imagem" id="profilePicture">
+                <img v-bind:src="imageProfile" id="profilePicture">
             </button>
         </div>
     </div>
@@ -26,7 +26,7 @@ export default defineComponent({
     data() {
         return{
             pesquisar:"",
-            imagem: "https://www.forestcom.com.br/wp-content/uploads/2018/09/blank-profile-picture-973460_640.png",
+            imageProfile: "https://www.forestcom.com.br/wp-content/uploads/2018/09/blank-profile-picture-973460_640.png",
         }
     },
     methods:{
@@ -50,22 +50,18 @@ export default defineComponent({
         display: flex;
         align-items: center;
     }
-    #logo{
-        width: auto;
-    }
     #sizedBox{
         width: 55vw;
     }
     #input{
         width: 35vw;
         height: 4vh;
-        align-self: center;
     }
     #profilePicture{
-        width: auto;
         height: 4vh;
         margin-top: 5px;
         border-radius: 20px;
+        cursor: pointer;
     }
     #pfpButton{
         margin-right: 2vh;
@@ -82,12 +78,6 @@ export default defineComponent({
         margin-top: 0px;
         height: auto;
         background-color: transparent;
-    }
-    #logoText:hover{
-        cursor: pointer;
-    }
-
-    #profilePicture:hover{
         cursor: pointer;
     }
 </style>
